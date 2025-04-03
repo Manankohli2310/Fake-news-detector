@@ -1,7 +1,6 @@
---no-cache-dir
 Flask
 gunicorn
-sklearn
+scikit-learn
 numpy
 pandas
 joblib
