@@ -1,6 +1,7 @@
 Flask
 flask-cors
 waitress
+gunicorn
 scikit-learn
 numpy
 pandas
