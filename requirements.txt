@@ -1,6 +1,8 @@
-flask
-sklearn
-joblib
-nltk
-requests
+Flask
 gunicorn
+sklearn
+numpy
+pandas
+requests
+joblib
+scipy
