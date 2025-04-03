@@ -1,8 +1,7 @@
 Flask
-gunicorn
+flask-cors
+waitress
 scikit-learn
 numpy
 pandas
-joblib
-scipy
-
+pickle-mixin
