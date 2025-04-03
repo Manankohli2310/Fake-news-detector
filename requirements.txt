@@ -1,8 +1,10 @@
+--no-cache-dir
 Flask
 gunicorn
 sklearn
 numpy
 pandas
-requests
 joblib
 scipy
+pickle
+
