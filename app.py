@@ -6,8 +6,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 app = Flask(__name__)
 
 # Load trained model and vectorizer
-MODEL_PATH = "model/fake_news_model.pkl"
-VECTORIZER_PATH = "model/vectorizer.pkl"
+MODEL_PATH = "fake_news_model.pkl"
+VECTORIZER_PATH = "vectorizer.pkl"
 
 if not os.path.exists(MODEL_PATH) or not os.path.exists(VECTORIZER_PATH):
     raise FileNotFoundError("Model or vectorizer file not found. Train the model first.")
