@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pickle
 import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS
 
 # Load trained model and vectorizer
 MODEL_PATH = "fake_news_model.pkl"
@@ -28,11 +30,9 @@ def predict():
     if "text" not in data:
         return jsonify({"error": "No 'text' key found in request"}), 400
 
-    # Vectorize input text
     input_text = [data["text"]]
     input_vectorized = vectorizer.transform(input_text)
 
-    # Make prediction
     prediction = model.predict(input_vectorized)[0]
     result = "Real" if prediction == 1 else "Fake"
 
